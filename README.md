@@ -8,6 +8,7 @@
  - Vite
 
  <h2>Installation</h2> 
+ 
  Установить зависимости npm 
  <code>npm i</code>
  
