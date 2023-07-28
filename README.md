@@ -1,35 +1,19 @@
-# vue-project
+<h1>Mini-project-Vue</h1>
 
-This template should help get you started developing with Vue 3 in Vite.
+<h2>Description</h2>
+Мини-проект преобразователя температуры из градусов Цельсия в градусы Фаренгейта и наоборот. 
+В данный момент проект находится в процессе разработки.
+Используемые технологии: 
+ - Vue3
+ - Vite
 
-## Recommended IDE Setup
+ <h2>Installation</h2> 
+ Установить зависимости npm 
+ <code>npm i</code>
+ 
+ Сборка проекта 
+ <code>npm run build</code>
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+ Запустить сервер
+ <code>npm run dev</code>
+ 
