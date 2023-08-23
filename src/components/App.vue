@@ -21,7 +21,7 @@
   </div>
   <div class="converter__wrapper">
       <label class="converter__label">Result</label>
-      <input class="converter__input converter__input--result" type="number" v-model="result">
+      <input class="converter__input converter__input--result" v-model="result" disabled>
   </div>
   </div>
   </div>
@@ -39,10 +39,11 @@ export default {
   methods: {
     ConvertDegrees() {
       if (this.degree === 'Fahrenheit' && this.number) {
-          this.result = ((this.number - 32) * 5/9).toFixed(2)
+          this.result = (((this.number - 32) * 5/9).toFixed(2)) + '°C';
+          
       }
       if (this.degree === 'Celsius' && this.number) {
-        this.result = ((this.number * 9/5) + 32).toFixed(2)
+        this.result = ((this.number * 9/5) + 32).toFixed(2) + '°F';
       }
     }
   }
@@ -89,6 +90,7 @@ body {
   &__input--result {
     border: none;
     outline: none;
+    font-weight: bold;
   }
   
   &__input::-webkit-outer-spin-button,
@@ -99,6 +101,7 @@ body {
   &__label {
      padding-left: 10px;
      padding-top: 10px;
+     color: lightgrey;
   }
   &__select {
     width: 100px;
@@ -106,10 +109,14 @@ body {
   }
 
   &__button {
+    background-color: blue;
+    color: #fff;
     width: 60px;
     height: 30px;
     margin-top: 25px;
     text-align: center;
+    border: none;
+    border-radius: 10%;
   }
 
 }
