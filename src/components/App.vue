@@ -7,7 +7,7 @@
       <input class="converter__input" type="number" v-model="number">
   </div>
   <div class="converter__wrapper">
-      <label class="converter__label">Type</label>
+      <label class="converter__label converter__label-select">Type</label>
       <select class="converter__select" v-model="degree">
         <option>
           Fahrenheit
@@ -39,11 +39,11 @@ export default {
   methods: {
     ConvertDegrees() {
       if (this.degree === 'Fahrenheit' && this.number) {
-          this.result = (((this.number - 32) * 5/9).toFixed(2)) + '°C';
+          this.result = (((this.number - 32) * 5/9).toFixed(2)) + ' °C';
           
       }
       if (this.degree === 'Celsius' && this.number) {
-        this.result = ((this.number * 9/5) + 32).toFixed(2) + '°F';
+        this.result = ((this.number * 9/5) + 32).toFixed(2) + ' °F';
       }
     }
   }
@@ -51,6 +51,10 @@ export default {
 </script>
 
 <style lang="scss">
+* {
+   box-sizing: border-box;
+}
+
 body {
   background-color: lightgrey;
 }
@@ -83,12 +87,16 @@ body {
 
   &__input {
     width: 70px;
-    padding: 5px;
-    margin: 10px;
+    height: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 10px 0 10px 10px;
   }
 
   &__input--result {
+    color: black;
     border: none;
+    height: 30px;
     outline: none;
     font-weight: bold;
   }
@@ -101,11 +109,17 @@ body {
   &__label {
      padding-left: 10px;
      padding-top: 10px;
-     color: lightgrey;
+     color: black;
   }
+
+  &__label-select {
+     padding-left: 20px;
+  }
+
   &__select {
     width: 100px;
-    margin: 10px;
+    margin: 10px 20px 10px 20px;
+    height: 30px;
   }
 
   &__button {
@@ -113,7 +127,7 @@ body {
     color: #fff;
     width: 60px;
     height: 30px;
-    margin-top: 25px;
+    margin-top: 35px;
     text-align: center;
     border: none;
     border-radius: 10%;
