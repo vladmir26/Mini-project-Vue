@@ -7,6 +7,7 @@ import VitePluginBrowserSync from 'vite-plugin-browser-sync'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/Mini-project-converter/'
   plugins: [
     vue(),
     VitePluginBrowserSync()
