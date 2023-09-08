@@ -78,6 +78,7 @@ body {
 
   &__inner-wrapper {
     display: flex;
+    align-items: flex-end;
   }
 
   &__wrapper {
@@ -126,8 +127,8 @@ body {
     background-color: blue;
     color: #fff;
     width: 60px;
+    margin: 10px 0;
     height: 30px;
-    margin-top: 35px;
     text-align: center;
     border: none;
     border-radius: 10%;
