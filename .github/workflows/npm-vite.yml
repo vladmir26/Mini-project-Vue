@@ -19,7 +19,7 @@ jobs:
           node-version: 16
       - run: npm ci
       - run: npm run build
-      - uses: actions/upload-pages-artifact@1
+      - uses: actions/upload-pages-artifact@3
         with: 
            name: github-pages
            path: dist
