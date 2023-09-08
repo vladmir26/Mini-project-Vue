@@ -22,11 +22,15 @@ jobs:
       - uses: actions/upload-pages-artifact@1
         with: 
            name: github-pages
+           path: dist
   deploy: 
     needs: build
     permissions: 
         pages: write
         id-token: write
+    environment: 
+       name: github-pages
+       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps: 
       - name: Deploy to Github Pages
